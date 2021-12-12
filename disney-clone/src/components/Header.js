@@ -1,16 +1,19 @@
 import React from 'react';
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 
 
 function Header() {
     return (
         <Nav>   
-            <Logo src="/images/logo.svg"/>
+            <Link to="/">
+                <Logo src="/images/logo.svg"/>
+            </Link>
             <NavMenu>
-                <a>
-                    <img src="/images/home-icon.svg"/>
-                    <span>Home</span>
-                </a>
+                    <a>
+                        <img src="/images/home-icon.svg"/>
+                        <span>Home</span>
+                    </a>
                 <a>
                     <img src="/images/search-icon.svg"/>
                     <span>Search</span>
@@ -41,6 +44,7 @@ export default Header
 
 
 const Nav = styled.nav`
+
     height: 70px;
     background: #090b13;   
     display:flex;
