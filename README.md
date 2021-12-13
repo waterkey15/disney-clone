@@ -24,4 +24,4 @@ npm start
 
 ![Home](/screen-shots/home.png)
 
-![Detail for a Movie](/screen-shots/detail.png)
+![Detail for a Movie](/screen-shots/details.png)
