@@ -48,6 +48,9 @@ const Content = styled.div`
 
 const Wrap = styled.div`
 
+    max-width:280px;
+    max-height: 150px;
+
     border-radius: 10px;
     overflow: hidden;
     border: 3px solid rgba(249, 249, 249, 0.1);

@@ -19,7 +19,7 @@ function Detail() {
                 console.log('no movie')
             }
         })
-    }, [])
+    }, [id])
 
 
     console.log(movie);
@@ -27,34 +27,39 @@ function Detail() {
 
     return (
         <Container>
-            <Background>
-                <img src={movie.backgroundImg} alt=""/>
-            </Background>
-            <ImageTitle>
-                <img src={movie.titleImg} alt=""/>
-            </ImageTitle>
-            <Controls>
-                <PlayButton>
-                    <img src="/images/play-icon-black.png"/>
-                    <span>Play</span>
-                </PlayButton>
-                <TrailerButton>
-                    <img src="/images/play-icon-white.png"/>
-                    <span>Trailer</span>
-                </TrailerButton>
-                <AddButton>
-                    <span>+</span>
-                </AddButton>
-                <GroupWatchButton>
-                    <img src="/images/group-icon.png" alt=""/>
-                </GroupWatchButton>
-            </Controls>
-            <Subtitle>  
-                {movie.subTitle}
-            </Subtitle>
-            <Description>
-                {movie.description}
-            </Description>
+            {movie && (
+                <> 
+                    <Background>
+                        <img src={movie.backgroundImg} alt=""/>
+                    </Background>
+                    <ImageTitle>
+                        <img src={movie.titleImg}/>
+                    </ImageTitle>
+                    <Controls>
+                        <PlayButton>
+                            <img src="/images/play-icon-black.png"/>
+                            <span>Play</span>
+                        </PlayButton>
+                        <TrailerButton>
+                            <img src="/images/play-icon-white.png"/>
+                            <span>Trailer</span>
+                        </TrailerButton>
+                        <AddButton>
+                            <span>+</span>
+                        </AddButton>
+                        <GroupWatchButton>
+                            <img src="/images/group-icon.png" alt=""/>
+                        </GroupWatchButton>
+                    </Controls>
+                    <Subtitle>  
+                        {movie.subTitle}
+                    </Subtitle>
+                    <Description>
+                        {movie.description}
+                    </Description>
+                </>
+            )}
+
         </Container>
     )
 }
