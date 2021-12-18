@@ -8,6 +8,13 @@ Database created with firebase database. I started my database in test-case whic
 
 Developers can deploy it locally for testing purposes with the following commands...
 
+Technologies and tools
+- React JS
+- Firebase
+- Styled components
+- React router
+- Redux 
+
 
 For Frontend 
 

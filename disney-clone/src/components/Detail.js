@@ -25,6 +25,11 @@ function Detail() {
     console.log(movie);
 
 
+    function showTrailer(){
+        console.log(document.getElementsByClassName('trailer_movie')[0].style.visibility = 'visible')
+    }
+
+
     return (
         <Container>
             {movie && (
@@ -40,7 +45,7 @@ function Detail() {
                             <img src="/images/play-icon-black.png"/>
                             <span>Play</span>
                         </PlayButton>
-                        <TrailerButton>
+                        <TrailerButton onClick={showTrailer}>
                             <img src="/images/play-icon-white.png"/>
                             <span>Trailer</span>
                         </TrailerButton>
@@ -57,6 +62,10 @@ function Detail() {
                     <Description>
                         {movie.description}
                     </Description>
+                    {/* <Trailer className="trailer_movie">
+                        <iframe width="1300" height="700" src="https://www.youtube.com/embed/2f516ZLyC6U" title="YouTube Trailer player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            X
+                    </Trailer> */}
                 </>
             )}
 
@@ -82,7 +91,7 @@ const Background = styled.div`
     right:0;
     z-index: -1;
     opacity: 0.8;
-
+    overflow: hidden;
     img{
         width:100%;
         height: 100%;
@@ -177,3 +186,21 @@ const Description = styled.div`
     color: rgb(249, 249, 249);
     max-width: 900px;
 `
+
+const Trailer = styled.div`
+    position: absolute;
+    top: 0;
+    display: flex
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+
+    margin-left: 40%;
+
+    iframe{
+        overflow: hidden;
+        width: 50vw;
+        height: 50hw;
+    }
+`
+
